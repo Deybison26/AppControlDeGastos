@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\deybi\\OneDrive\\Escritorio\\Proyecto_prueba\\AppControlDeGatos\\AppControlDeGatos.csproj": {}
+    "C:\\Users\\Lina\\Documents\\FUNDACION\\SEGUNDO SEMESTRE\\INGENIERIA DE SOFTWARE\\proyectoDeivy\\AppControlDeGastos\\AppControlDeGatos.csproj": {}
   },
   "projects": {
-    "C:\\Users\\deybi\\OneDrive\\Escritorio\\Proyecto_prueba\\AppControlDeGatos\\AppControlDeGatos.csproj": {
+    "C:\\Users\\Lina\\Documents\\FUNDACION\\SEGUNDO SEMESTRE\\INGENIERIA DE SOFTWARE\\proyectoDeivy\\AppControlDeGastos\\AppControlDeGatos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\deybi\\OneDrive\\Escritorio\\Proyecto_prueba\\AppControlDeGatos\\AppControlDeGatos.csproj",
+        "projectUniqueName": "C:\\Users\\Lina\\Documents\\FUNDACION\\SEGUNDO SEMESTRE\\INGENIERIA DE SOFTWARE\\proyectoDeivy\\AppControlDeGastos\\AppControlDeGatos.csproj",
         "projectName": "AppControlDeGatos",
-        "projectPath": "C:\\Users\\deybi\\OneDrive\\Escritorio\\Proyecto_prueba\\AppControlDeGatos\\AppControlDeGatos.csproj",
-        "packagesPath": "C:\\Users\\deybi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\deybi\\OneDrive\\Escritorio\\Proyecto_prueba\\AppControlDeGatos\\obj\\",
+        "projectPath": "C:\\Users\\Lina\\Documents\\FUNDACION\\SEGUNDO SEMESTRE\\INGENIERIA DE SOFTWARE\\proyectoDeivy\\AppControlDeGastos\\AppControlDeGatos.csproj",
+        "packagesPath": "C:\\Users\\Lina\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Lina\\Documents\\FUNDACION\\SEGUNDO SEMESTRE\\INGENIERIA DE SOFTWARE\\proyectoDeivy\\AppControlDeGastos\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\deybi\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Lina\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {

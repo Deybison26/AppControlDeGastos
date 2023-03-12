@@ -9,5 +9,7 @@ namespace AppControlDeGatos.Domain.Interfaces
         public Task<List<User>> GetAllUsers();
         public Task<User> GetByNameAsync(string name);
         public Task<User> GetByEmailAsync(string product);
+        public Task<User> GetByEmailContraseniaAsync(string email, string contrasenia);
+
     }
 }

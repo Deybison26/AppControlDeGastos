@@ -31,6 +31,12 @@ namespace miTienda.Controllers
             var result = await userService.FindById(id); 
             return result; 
         }
+
+        [HttpPost("~/login")]
+        public async Task<User> Login(string email, string contrasenia) {
+            var result = await userService.LoginAsync(email, contrasenia);
+            return result;
+        }
         
     }
 }

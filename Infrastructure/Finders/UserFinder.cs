@@ -20,7 +20,7 @@ namespace AppControlDeGatos.Infrastructure.Finders
         }
         public Task<User> GetByEmailAsync(string email)
         {
-            var filter = Builders<User>.Filter.Eq("Email", email);
+            var filter = Builders<User>.Filter.Eq("email", email);
             return _collection.Find(filter).FirstOrDefaultAsync();
         }
 
@@ -34,6 +34,14 @@ namespace AppControlDeGatos.Infrastructure.Finders
         public Task<User> GetByNameAsync(string name)
         {
             throw new NotImplementedException();
+        }
+        public async Task<User> GetByEmailContraseniaAsync(string email, string contrasenia)
+        {
+            var filterUno = Builders<User>.Filter.Eq("email", email);
+            var filterDos = Builders<User>.Filter.Eq("contrasenia", contrasenia);
+            var combine = Builders<User>.Filter.And(filterUno, filterDos);
+            var result = await _collection.Find(combine).FirstOrDefaultAsync();
+            return result;
         }
     }
 }

@@ -34,9 +34,16 @@ namespace AppControlDeGatos.Domain.Services
         {
             //todo if exist 
             var idGnerated = Guid.NewGuid().ToString();
-            entity.Id = idGnerated;
+            entity.id = idGnerated;
             var result = await userRepository.InsertAsync(entity);
             return result;
+        }
+
+        public async Task<User> LoginAsync(string email, string contrasenia)
+        {
+            var emailVerificacion = await userFinder.GetByEmailContraseniaAsync(email, contrasenia);
+            return emailVerificacion;
+            
         }
     }
 }

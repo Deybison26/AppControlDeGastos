@@ -22,13 +22,13 @@ namespace AppControlDeGatos.Infrastructure.Repositories
 
         public Task DeleteAsync(string id)
         {
-            return _collection.FindOneAndDeleteAsync(user => user.Id == id);
+            return _collection.FindOneAndDeleteAsync(user => user.id == id);
         }
 
        
         public async Task<User> UpdateAsync(User entity)
         {
-            var updated = await _collection.ReplaceOneAsync(user => user.Id == entity.Id, entity);
+            var updated = await _collection.ReplaceOneAsync(user => user.id == entity.id, entity);
             return entity;
         }
 
