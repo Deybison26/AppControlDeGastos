@@ -25,6 +25,12 @@ namespace miTienda.Controllers
             var result = await userService.InsertAsync(user);
             return user;
         }
+        [HttpGet("~/GetUserByID")]
+        public async Task<User> GetUserByID(string id)
+        {
+            var result = await userService.FindById(id); 
+            return result; 
+        }
         
     }
 }
