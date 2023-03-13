@@ -33,8 +33,21 @@ namespace miTienda.Controllers
         }
 
         [HttpPost("~/login")]
-        public async Task<User> Login(string email, string contrasenia) {
-            var result = await userService.LoginAsync(email, contrasenia);
+        public dynamic Login(string email, string contrasenia) {
+            var result = userService.LoginAsync(email, contrasenia);
+            if(result.Result == null)
+            {
+                return new {
+                    message = "Email o contraseña inválidos"
+                };
+            }
+            
+            return result.Result;
+        }
+
+        [HttpPost("~/sign-in")]
+        public dynamic SignIn(string nombre, string apellidos, string nombre_usuario, string email, string contrasenia) {
+            var result = userService.SignInAsync(nombre, apellidos, nombre_usuario, email, contrasenia);
             return result;
         }
         

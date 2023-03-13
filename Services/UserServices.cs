@@ -45,5 +45,27 @@ namespace AppControlDeGatos.Domain.Services
             return emailVerificacion;
             
         }
+        public dynamic SignInAsync(string nombre, string apellidos, string nombre_usuario, string email, string contrasenia)
+        {
+            var user = new User();
+            var idGnerated = Guid.NewGuid().ToString();
+            user.id = idGnerated;
+            user.nombres = nombre;
+            user.apellidos = apellidos;
+            user.nombre_de_usuario = nombre_usuario;
+            user.email = email;
+            user.contrasenia = contrasenia;
+            
+            var emailVerified = userFinder.GetByEmailAsync(user.email);
+            if(emailVerified.Result == null){
+                var userSave = userRepository.InsertAsync(user);
+                return userSave.Result;
+            }else{
+                return new {
+                    message = "Email ya registrado"
+                };
+            }
+            
+        }
     }
 }

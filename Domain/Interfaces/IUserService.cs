@@ -9,6 +9,7 @@ namespace AppControlDeGatos.Domain.Interfaces
         public Task<List<User>> GetAllUsers();
         public Task<User> FindByEmail(string email);
         public Task<User> LoginAsync(string email, string contrasenia);
-
+        public dynamic SignInAsync(string nombre, string apellidos, string nombre_usuario, string email, string contrasenia);
+        
     }
 }
