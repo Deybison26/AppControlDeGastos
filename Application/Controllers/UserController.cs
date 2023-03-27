@@ -50,6 +50,11 @@ namespace miTienda.Controllers
             var result = userService.SignInAsync(nombre, apellidos, nombre_usuario, email, contrasenia);
             return result;
         }
-        
+
+        //[HttpPost("~/categories")]
+        //public dinamic Categorie(string marca, string mercado, string servicios, string gastos_v){
+            //var result= userService.CategoriesAsync(mercado,servicios,gastos_v);
+            //return result;
+        //}
     }
 }
